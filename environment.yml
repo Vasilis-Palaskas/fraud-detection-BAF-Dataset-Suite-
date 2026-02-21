@@ -1,0 +1,16 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10  # This "locks" the version for everyone
+  - pyarrow      # Fast data loading for BAF dataset
+  - pandas
+  - scikit-learn
+  - xgboost
+  - jupyter
+  - matplotlib
+  - seaborn
+  - pip
+  - pip:
+      - lightgbm

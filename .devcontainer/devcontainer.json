@@ -1,0 +1,26 @@
+{
+    "name": "Fraud Detection ML",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/conda:1": {
+            "version": "latest"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "python.selectInterpreter": "/opt/conda/bin/python"
+            },
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "remoteUser": "vscode",
+    "postCreateCommand": "/opt/conda/bin/mamba env update -n base -f environment.yml || /opt/conda/bin/conda env update -n base -f environment.yml"
+}
